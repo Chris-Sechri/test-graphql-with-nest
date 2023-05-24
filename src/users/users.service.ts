@@ -11,22 +11,45 @@ export class UsersService {
   findAll() {
     return [
       {
+        id: 1,
         name: "Chris"
       },
       {
+        id: 2,
         name: "Earl Quincy"
       },
       {
+        id: 3,
         name: "David"
       },
       {
+        id: 4,
         name: "Junior"
       },
     ];
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} user`;
+    const listUsers = [
+      {
+        id: 1,
+        name: "Chris"
+      },
+      {
+        id: 2,
+        name: "Earl Quincy"
+      },
+      {
+        id: 3,
+        name: "David"
+      },
+      {
+        id: 4,
+        name: "Junior"
+      },
+    ];
+    const user = listUsers.filter((element) => element.id == id);
+    return user[0];
   }
 
   update(id: number, updateUserInput: UpdateUserInput) {
